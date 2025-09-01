@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    height             : 100vh;
+    display            : flex;
+    flex-direction     : column;
+    align-items        : center;
+    justify-content    : center;
+    gap                : 2rem;
+    font-size          : 16px;
+    font-family        : "Red Hat Display", sans-serif;
+    background-image   : url(./images/pattern-background-desktop.svg);
+    background-position: top;
+    background-size    : contain;
+    background-repeat  : no-repeat;
+    background-color   : hsl(225, 100%, 94%);
+}
+
+p,
+.content-left-sub>h4:nth-child(2),
+.cancel {
+    color: hsl(224, 23%, 55%);
+}
+
+.whole-container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    font-size      : clamp(0.5rem, 0.8rem + 1vw, 1rem);
+    margin         : 0 1rem;
+}
+
+.content-container-wrapper {
+    display         : flex;
+    flex-direction  : row;
+    align-items     : center;
+    justify-content : center;
+    background-color: white;
+    border-radius   : 0 0 24px 24px;
+}
+
+.card-image-container svg {
+    border-radius: 24px 24px 0 0;
+}
+
+.whole-content-container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    max-width      : calc(25rem + 1vw);
+    gap            : 2rem;
+    padding        : 3rem 1.5rem;
+}
+
+.top-content-container {
+    text-align: center;
+    max-width : 90%;
+}
+
+.top-content-container>h1 {
+    margin-bottom: 0.6rem;
+}
+
+.top-wrapper {
+    display        : flex;
+    justify-content: center;
+}
+
+.sub-plan-container {
+    padding         : 1.5rem;
+    border-radius   : 12px;
+    background-color: hsl(225, 100%, 98%);
+    display         : flex;
+    justify-content : space-between;
+    font-size       : clamp(0.5rem, 0.7rem + 1vw, 1rem);
+}
+
+.left-sub-plan {
+    display: flex;
+    gap    : 1rem;
+    flex   : 1 1 calc(20rem + 1vw);
+}
+
+.content-left-sub {
+    display       : flex;
+    flex-direction: column;
+}
+
+.right-sub-plan {
+    display    : flex;
+    align-items: center;
+}
+
+.right-sub-plan>a {
+    font-weight          : 700;
+    color                : hsl(245, 75%, 52%);
+    text-decoration-color: hsl(245, 75%, 52%);
+}
+
+a {
+    transition: all 0.3s ease-in-out;
+}
+
+.right-sub-plan:hover>a,
+.right-sub-plan:active>a {
+    color                : hsla(245, 90%, 40%, 0.548);
+    text-decoration-color: hsl(225, 100%, 98%);
+}
+
+.cancel:hover>h4,
+.cancel:active>h4 {
+    color : hsl(223, 47%, 23%);
+    cursor: pointer;
+}
+
+.buttons-container {
+    display       : flex;
+    flex-direction: column;
+    gap           : 1rem;
+}
+
+.proceed {
+    padding         : 1rem 2rem;
+    background-color: hsl(245, 75%, 52%);
+    box-shadow: 0px 8px 40px -10px hsl(245, 75%, 52%);
+    border-radius   : 12px;
+    color           : white;
+    text-align      : center;
+    transition      : all 0.3s ease-in-out;
+}
+
+.proceed-container:hover .proceed,
+.proceed-container:active .proceed {
+    background-color: hsla(245, 90%, 40%, 0.548);
+    box-shadow: 0px 8px 40px -10px hsla(245, 90%, 40%, 0.548);
+}
+
+.cancel {
+    text-align: center;
+}
+
+.cancel>h4 {
+    transition: all 0.3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 800;
+}
+
+.content-left-sub>h4:nth-child(2) {
+    font-weight: 500;
+}
+
+@media (max-width:670px) {
+    .sub-plan-container {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width:320px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
